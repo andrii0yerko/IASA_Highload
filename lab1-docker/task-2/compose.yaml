@@ -1,0 +1,12 @@
+services:
+  lite-server:
+    build:
+      context: "."
+      dockerfile: "./Dockerfile"
+    entrypoint: ["lite-server", "-c", "bs-config.json"]
+    volumes:
+      - /home/fort/IASA_Highload/lab1-docker/task-2/static:/app/static
+      - /home/fort/IASA_Highload/lab1-docker/task-2/bs-config.json:/app/bs-config.json
+    ports:
+      - 1999:3000
+      - 2000:3001
