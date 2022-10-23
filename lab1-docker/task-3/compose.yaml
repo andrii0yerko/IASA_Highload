@@ -1,0 +1,10 @@
+services:
+  json-server:
+    build:
+      context: "."
+      dockerfile: "./Dockerfile"
+    entrypoint: ["json-server", "--watch", "db.json", "--host", "0.0.0.0"]
+    volumes:
+      - /home/fort/IASA_Highload/lab1-docker/task-3/db.json:/app/db.json
+    ports:
+      - 3001:3000
