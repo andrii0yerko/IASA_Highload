@@ -11,19 +11,21 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+    expose:
+      - "3000"
 
   json-server:
     build:
       context: "../task-3"
       dockerfile: "./Dockerfile"
-    entrypoint: ["json-server", "--watch", "db.json", "--host", "0.0.0.0"]
+    entrypoint: ["json-server", "--watch", "db.json", "--host", "0.0.0.0", "--port", "3001"]
     volumes:
       - /home/fort/IASA_Highload/lab1-docker/task-3/db.json:/app/db.json
     deploy:
       mode: replicated
       replicas: 3
-    depends_on:
-      - lite-server
+    expose:
+      - "3001"
 
   nginx:
     image: nginx
