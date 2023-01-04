@@ -10,6 +10,7 @@ services:
       - 27017:27017
     volumes:
       - ./scripts:/scripts
+      - ../data:/data
 
 # Config Servers
   configsvr01:
