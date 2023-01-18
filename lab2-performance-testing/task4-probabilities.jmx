@@ -176,7 +176,7 @@
                 <stringProp name="outputFormat"></stringProp>
                 <stringProp name="minimumValue">1</stringProp>
                 <stringProp name="maximumValue">100</stringProp>
-                <stringProp name="randomSeed">42</stringProp>
+                <stringProp name="randomSeed"></stringProp>
                 <boolProp name="perThread">true</boolProp>
               </RandomVariableConfig>
               <hashTree/>
@@ -186,7 +186,7 @@
                 <stringProp name="minimumValue">0</stringProp>
                 <stringProp name="maximumValue">1</stringProp>
                 <stringProp name="randomSeed">42</stringProp>
-                <boolProp name="perThread">false</boolProp>
+                <boolProp name="perThread">true</boolProp>
               </RandomVariableConfig>
               <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="openPost" enabled="true">
@@ -195,7 +195,7 @@
                 <stringProp name="minimumValue">0</stringProp>
                 <stringProp name="maximumValue">100</stringProp>
                 <stringProp name="randomSeed">42</stringProp>
-                <boolProp name="perThread">false</boolProp>
+                <boolProp name="perThread">true</boolProp>
               </RandomVariableConfig>
               <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="postNum" enabled="true">
@@ -204,7 +204,7 @@
                 <stringProp name="minimumValue">1</stringProp>
                 <stringProp name="maximumValue">15</stringProp>
                 <stringProp name="randomSeed">42</stringProp>
-                <boolProp name="perThread">false</boolProp>
+                <boolProp name="perThread">true</boolProp>
               </RandomVariableConfig>
               <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="randomOrFirst" enabled="true">
@@ -213,12 +213,12 @@
                 <stringProp name="minimumValue">0</stringProp>
                 <stringProp name="maximumValue">100</stringProp>
                 <stringProp name="randomSeed">42</stringProp>
-                <boolProp name="perThread">false</boolProp>
+                <boolProp name="perThread">true</boolProp>
               </RandomVariableConfig>
               <hashTree/>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Home" enabled="true">
-                <stringProp name="IfController.condition">${choiceFirstStep}&lt;=&quot;15&quot;;</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">${choiceFirstStep}&lt;=15;</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="home" enabled="true">
@@ -256,8 +256,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="RandomDate" enabled="true">
-                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;&quot;15&quot;)&amp;(${choiceFirstStep}&lt;=&quot;25&quot;);</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;15)&amp;&amp;(${choiceFirstStep}&lt;=25);</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="randomDate" enabled="true">
@@ -295,8 +295,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="PredefinedDate" enabled="true">
-                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;&quot;25&quot;)&amp;(${choiceFirstStep}&lt;=&quot;55&quot;);</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;25)&amp;&amp;(${choiceFirstStep}&lt;=55);</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="predefinedDate" enabled="true">
@@ -334,8 +334,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Search" enabled="true">
-                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;&quot;55&quot;)&amp;(${choiceFirstStep}&lt;=&quot;85&quot;);</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">(${choiceFirstStep}&gt;55)&amp;&amp;(${choiceFirstStep}&lt;=85);</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="search" enabled="true">
@@ -412,8 +412,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="LargeCalendar" enabled="true">
-                <stringProp name="IfController.condition">(${choiceFirstStep}&lt;=&quot;85&quot;)&amp;(${choiceFirstStep}&lt;=&quot;95&quot;);</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">(${choiceFirstStep}&lt;=85)&amp;&amp;(${choiceFirstStep}&lt;=95);</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="calendar" enabled="true">
@@ -451,8 +451,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Contacts" enabled="true">
-                <stringProp name="IfController.condition">${choiceFirstStep}&gt;&quot;95&quot;;</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">${choiceFirstStep}&gt;95;</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="contacts" enabled="true">
@@ -490,8 +490,8 @@
                 </hashTree>
               </hashTree>
               <IfController guiclass="IfControllerPanel" testclass="IfController" testname="OpenRandomPage" enabled="true">
-                <stringProp name="IfController.condition">(${choiceFirstStep}&lt;=&quot;55&quot;)&amp;&amp;(${openPage}==&quot;1&quot;);</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
+                <stringProp name="IfController.condition">(${choiceFirstStep}&lt;=55)&amp;&amp;(${openPage}==1);</stringProp>
+                <boolProp name="IfController.evaluateAll">true</boolProp>
               </IfController>
               <hashTree>
                 <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Random Post" enabled="true">
@@ -596,44 +596,44 @@
                     <hashTree/>
                   </hashTree>
                 </hashTree>
-              </hashTree>
-              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="OpenPost" enabled="true">
-                <stringProp name="IfController.condition">${openPost}&lt;=&quot;80&quot;;</stringProp>
-                <boolProp name="IfController.evaluateAll">false</boolProp>
-              </IfController>
-              <hashTree>
-                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="openPost" enabled="true">
-                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-                    <collectionProp name="Arguments.arguments"/>
-                  </elementProp>
-                  <stringProp name="HTTPSampler.domain">${url}</stringProp>
-                  <stringProp name="HTTPSampler.port"></stringProp>
-                  <stringProp name="HTTPSampler.protocol">http</stringProp>
-                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-                  <stringProp name="HTTPSampler.path">${postLink}</stringProp>
-                  <stringProp name="HTTPSampler.method">GET</stringProp>
-                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
-                </HTTPSamplerProxy>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="OpenPost" enabled="true">
+                  <stringProp name="IfController.condition">${openPost}&lt;=80;</stringProp>
+                  <boolProp name="IfController.evaluateAll">true</boolProp>
+                </IfController>
                 <hashTree>
-                  <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
-                    <collectionProp name="HeaderManager.headers">
-                      <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
-                        <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
-                        <stringProp name="Header.value">1</stringProp>
-                      </elementProp>
-                      <elementProp name="Accept" elementType="Header">
-                        <stringProp name="Header.name">Accept</stringProp>
-                        <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
-                      </elementProp>
-                    </collectionProp>
-                  </HeaderManager>
-                  <hashTree/>
+                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="openPost" enabled="true">
+                    <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                      <collectionProp name="Arguments.arguments"/>
+                    </elementProp>
+                    <stringProp name="HTTPSampler.domain">${url}</stringProp>
+                    <stringProp name="HTTPSampler.port"></stringProp>
+                    <stringProp name="HTTPSampler.protocol">http</stringProp>
+                    <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                    <stringProp name="HTTPSampler.path">${postLink}</stringProp>
+                    <stringProp name="HTTPSampler.method">GET</stringProp>
+                    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                    <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                    <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                    <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                    <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                    <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                    <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  </HTTPSamplerProxy>
+                  <hashTree>
+                    <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                      <collectionProp name="HeaderManager.headers">
+                        <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                          <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                          <stringProp name="Header.value">1</stringProp>
+                        </elementProp>
+                        <elementProp name="Accept" elementType="Header">
+                          <stringProp name="Header.name">Accept</stringProp>
+                          <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                        </elementProp>
+                      </collectionProp>
+                    </HeaderManager>
+                    <hashTree/>
+                  </hashTree>
                 </hashTree>
               </hashTree>
             </hashTree>

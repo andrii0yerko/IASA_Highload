@@ -435,7 +435,7 @@ vars.put(&quot;randomPosts&quot;,query[i]);</stringProp>
           <hashTree/>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">${__property(Posts, numPosts,900)}</stringProp>
+            <stringProp name="LoopController.loops">${__property(Posts, numPosts,100)}</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="counter" enabled="true">
